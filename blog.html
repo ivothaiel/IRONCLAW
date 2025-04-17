@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Claw - Precios</title>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="./assets/fotos/index/pesa.png" type="image/png">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./assets/fotos/index/logo.png" alt="Logo de Iron Claw" class="img-fluid me-2" style="height: 40px;">
+                IRON CLAW
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="clases.html" id="clasesMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Clases</a>
+                        <ul class="dropdown-menu" aria-labelledby="clasesMenu">
+                            <li><a class="dropdown-item" href="clases.html">Musculación</a></li>
+                            <li><a class="dropdown-item" href="clases.html">Powerlifting</a></li>
+                            <li><a class="dropdown-item" href="clases.html">CrossFit</a></li>
+                            <li><a class="dropdown-item" href="clases.html">Yoga</a></li>
+                            <li><a class="dropdown-item" href="clases.html">Pilates</a></li>
+                            <li><a class="dropdown-item" href="clases.html">Calistenia</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="entrenadores.html">Entrenadores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="precios.html">Precios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Nuestro Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Inicio del blog-->
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Blog Fitness</h1>
+        <!-- Filtros por tags -->
+        <div class="d-flex justify-content-center mb-4">
+            <button class="btn btn-outline-primary mx-2 filter-btn" data-filter="all">Todos</button>
+            <button class="btn btn-outline-primary mx-2 filter-btn" data-filter="entrenamiento">Entrenamiento</button>
+            <button class="btn btn-outline-primary mx-2 filter-btn" data-filter="bienestar">Bienestar</button>
+            <button class="btn btn-outline-primary mx-2 filter-btn" data-filter="alimentacion">Alimentación</button>
+        </div>
+        <!-- Diseño tipo periódico con CSS Grid -->
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="blog-articles">
+            <div class="col-md-4 article entrenamiento" data-aos="fade-up">
+                <div class="card">
+                    <img src="./assets/fotos/blog/entrenamiento/blogENTRENAMIENTO.jpg" class="card-img-top" alt="Entrenamiento">
+                    <div class="card-body">
+                        <h5 class="card-title">Entrenamiento de Fuerza</h5>
+                        <p class="card-text">Descubre cómo mejorar tu fuerza con estos consejos.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 article entrenamiento" data-aos="fade-up">
+                <div class="card">
+                    <img src="./assets/fotos/blog/entrenamiento/blogRUTINA.jpg" class="card-img-top" alt="Entrenamiento">
+                    <div class="card-body">
+                        <h5 class="card-title">Guia Definitiva para mejorar tus abs</h5>
+                        <p class="card-text"> Descubre cómo mejorar tus abdominales con estos consejos.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 article entrenamiento" data-aos="fade-up">
+                <div class="card">
+                    <img src="./assets/fotos/blog/entrenamiento/flexiones.jpg" class="card-img-top" alt="Entrenamiento">
+                    <div class="card-body">
+                        <h5 class="card-title">Variaciones de Flexiones</h5>
+                        <p class="card-text">No existe una sola forma, descubre las mejores variaciones de flexiones.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 article entrenamiento" data-aos="fade-up">
+                <div class="card">
+                    <img src="./assets/fotos/blog/entrenamiento/spotterBLOG.jpg" class="card-img-top" alt="Entrenamiento">
+                    <div class="card-body">
+                        <h5 class="card-title">Razones por las que si o si necesitas un Spotter</h5>
+                        <p class="card-text">Descubre las razones por las que necesitas un spotter en el gimnasio.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <!--BLOGS DE RECETAS-->
+            <div class="col-md-4 article alimentacion" data-aos="fade-up">
+                <div class="card">
+                    <img src="./assets/fotos/blog/recetas/prepMeals.jpg" class="card-img-top" alt="Alimentacion">
+                    <div class="card-body">
+                        <h5 class="card-title">Necesitas preparar tus comidas</h5>
+                        <p class="card-text">Refrigeración, conservación, y más consejos para preparar tus comidas de la semana.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 article alimentacion" data-aos="fade-up">
+                <div class="card">
+                    <img src="./assets/fotos/blog/recetas/blogFRUTOSSECOS.jpg" class="card-img-top" alt="Alimentacion">
+                    <div class="card-body">
+                        <h5 class="card-title">Beneficios de los frutos secos</h5>
+                        <p class="card-text">Sus propiedades, beneficios, y consejos para consumirlos.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 article alimentacion" data-aos="fade-up">
+                <div class="card">
+                    <img src="./assets/fotos/blog/recetas/blogPROTEINA.jpg" class="card-img-top" alt="Alimentacion">
+                    <div class="card-body">
+                        <h5 class="card-title">Las mejores fuentes de proteina</h5>
+                        <p class="card-text"> Descubre las mejores fuentes de proteina para tu dieta.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <!--PARA EL BIENESTAR-->
+            <div class="col-md-4 article bienestar" data-aos="fade-up">
+                <div class="card">
+                    <img src="./assets/fotos/blog/bienestar/blogMEDITACION.jpg" class="card-img-top" alt="Bienestar">
+                    <div class="card-body">
+                        <h5 class="card-title">Es necesario meditar</h5>
+                        <p class="card-text">Descubre como meditar puede mejorar tu bienestar.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 article bienestar" data-aos="fade-up">
+                <div class="card">
+                    <img src="./assets/fotos/blog/bienestar/vidasocial.jpg" class="card-img-top" alt="Bienestar">
+                    <div class="card-body">
+                        <h5 class="card-title">GYM: El mejor lugar para socializar</h5>
+                        <p class="card-text"> Descubre como el gimnasio puede ser un lugar ideal para socializar.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 article bienestar" data-aos="fade-up">
+                <div class="card">
+                    <img src="./assets/fotos/blog/bienestar/blogSALUDMENTAL.jpg" class="card-img-top" alt="Bienestar">
+                    <div class="card-body">
+                        <h5 class="card-title">Debes cuidar tu cuerpo, pero tambien tu mente</h5>
+                        <p class="card-text"> Descubre como cuidar tu salud mental.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de comentarios -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Comentarios</h2>
+        <div class="mb-4">
+            <textarea class="form-control mb-2" rows="3" placeholder="Escribe tu comentario..."></textarea>
+            <button class="btn btn-primary" id="addComment">Enviar</button>
+        </div>
+        <div id="comments">
+            <div class="comment mb-3">
+                <div class="d-flex align-items-center">
+                    <img src="./assets/fotos/testimonios/avatar1.jpg" alt="Avatar" class="rounded-circle me-3" style="width: 50px; height: 50px;">
+                    <div>
+                        <h5 class="mb-1">Usuario 1</h5>
+                        <p class="mb-0">¡Excelente artículo sobre fuerza!</p>
+                        <button class="btn btn-link btn-sm text-decoration-none text-primary reply-btn">Responder</button>
+                        <button class="btn btn-link btn-sm text-decoration-none text-warning highlight-btn">Destacar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="comment mb-3">
+                <div class="d-flex align-items-center">
+                    <img src="./assets/fotos/testimonios/avatar2.jpg" alt="Avatar" class="rounded-circle me-3" style="width: 50px; height: 50px;">
+                    <div>
+                        <h5 class="mb-1">Usuario 2</h5>
+                        <p class="mb-0">Me encantó el enfoque en bienestar.</p>
+                        <button class="btn btn-link btn-sm text-decoration-none text-primary reply-btn">Responder</button>
+                        <button class="btn btn-link btn-sm text-decoration-none text-warning highlight-btn">Destacar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Newsletter</h3>
+                    <form id="newsletterForm">
+                        <input type="email" class="form-control mb-2" placeholder="Tu email" required>
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                        <span class="spinner-border spinner-border-sm d-none"></span>
+                    </form>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h3>Redes</h3>
+                    <a href="#" class="text-white d-block">Facebook</a>
+                    <a href="#" class="text-white d-block">Instagram</a>
+                    <a href="#" class="text-white d-block">Twitter</a>
+                </div>
+                <div class="col-md-4">
+                    <h3>Mapa</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=..." style="width: 100%; height: 200px; border: 0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        $(document).ready(function() {
+            // Menú: aparece al pasar el mouse
+            $('.dropdown').hover(function() {
+                $(this).find('.dropdown-menu').slideDown(200);
+            }, function() {
+                $(this).find('.dropdown-menu').slideUp(200);
+            });
+
+            // Filtros por tags con jQuery .filter()
+            $('.filter-btn').on('click', function() {
+                const filter = $(this).data('filter');
+                if (filter === 'all') {
+                    $('#blog-articles .article').fadeIn(); // Mostrar todos los artículos
+                } else {
+                    $('#blog-articles .article').hide(); // Ocultar todos los artículos primero
+                    $('#blog-articles .article').filter(`.${filter}`).fadeIn(); // Mostrar solo los artículos con la clase correspondiente
+                }
+            });
+
+            // Agregar comentarios dinámicos
+            $('#addComment').on('click', function() {
+                const commentText = $('textarea').val();
+                if (commentText.trim()) {
+                    $('#comments').append(`
+                        <div class="comment mb-3">
+                            <div class="d-flex align-items-center">
+                                <img src="./assets/fotos/testimonios/usuario" alt="Avatar" class="rounded-circle me-3" style="width: 50px; height: 50px;">
+                                <div>
+                                    <h5 class="mb-1">Nuevo Usuario</h5>
+                                    <p class="mb-0">${commentText}</p>
+                                    <button class="btn btn-link btn-sm text-decoration-none text-primary reply-btn">Responder</button>
+                                    <button class="btn btn-link btn-sm text-decoration-none text-warning highlight-btn">Destacar</button>
+                                </div>
+                            </div>
+                        </div>
+                    `);
+                  
+                }
+            });
+
+            // Responder y destacar comentarios
+            $('#comments').on('click', '.reply-btn', function() {
+                const replyBox = $('<textarea class="form-control my-2" rows="2" placeholder="Escribe tu respuesta..."></textarea>');
+                const sendReply = $('<button class="btn btn-sm btn-primary">Enviar</button>');
+                $(this).parent().append(replyBox, sendReply);
+
+                sendReply.on('click', function() {
+                    const replyText = replyBox.val();
+                    if (replyText.trim()) {
+                        replyBox.after(`<p class="text-muted ms-3">${replyText}</p>`);
+                        replyBox.remove();
+                        sendReply.remove();
+                    }
+                });
+            });
+
+            $('#comments').on('click', '.highlight-btn', function() {
+                $(this).closest('.comment').toggleClass('bg-warning');
+            });
+        });
+    </script>
+</body>
+</html>

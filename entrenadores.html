@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Claw - Entrenadores</title>
+    <!-- Bootstrap CSS -->
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/fotos/index/pesa.png" type="image/png">
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            background-color: #dc8d8d;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Mega menú */
+        .mega-menu {
+            width: 500px;
+        }
+        /* Efecto flip para las tarjetas */
+        .flip-card {
+            perspective: 1000px;
+            height: 450px; /* Altura fija para evitar superposición */
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        .flip-card-back {
+            transform: rotateY(180deg);
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        /* Estilo para las estrellas */
+        .star-rating input {
+            display: none;
+        }
+        .star-rating label {
+            font-size: 1.5rem;
+            color: #ddd;
+            cursor: pointer;
+        }
+        .star-rating input:checked ~ label,
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: #ffc107;
+        }
+        /* Footer */
+        footer {
+            margin-top: auto; /* Empuja el footer al final */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./assets/fotos/index/logo.png" alt="Logo de Iron Claw" class="img-fluid me-2" style="height: 40px;">
+                IRON CLAW
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="clases.html" id="clasesMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Clases</a>
+                        <ul class="dropdown-menu" aria-labelledby="clasesMenu">
+                            <li><a class="dropdown-item" href="clases.html">Musculación</a></li>
+                            <li><a class="dropdown-item" href="clases.html">Powerlifting</a></li>
+                            <li><a class="dropdown-item" href="clases.html">CrossFit</a></li>
+                            <li><a class="dropdown-item" href="clases.html">Yoga</a></li>
+                            <li><a class="dropdown-item" href="clases.html">Pilates</a></li>
+                            <li><a class="dropdown-item" href="clases.html">Calistenia</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="entrenadores.html">Entrenadores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="precios.html">Precios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Nuestro Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Sección de Entrenadores -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Nuestros Entrenadores</h2>
+            <div class="row">
+                <!-- Entrenador 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card">
+                                    <img src="./assets/fotos/entrenadores/musculacion.jpg" class="card-img-top" alt="Entrenador 1">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Juan Pérez</h5>
+                                        <p class="card-text">Especialista en Fuerza</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>Juan Pérez</h5>
+                                <p>10 años de experiencia en musculación y powerlifting.</p>
+                                <!-- Barras de habilidades -->
+                                <div class="mb-3">
+                                    <label>Fuerza</label>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-width="90"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Resistencia</label>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 0%;" data-width="70"></div>
+                                    </div>
+                                </div>
+                                <div class="star-rating d-flex justify-content-center">
+                                    <input type="radio" name="rating1" id="rating1-star1" value="1">
+                                    <label for="rating1-star1">★</label>
+                                    <input type="radio" name="rating1" id="rating1-star2" value="2">
+                                    <label for="rating1-star2">★</label>
+                                    <input type="radio" name="rating1" id="rating1-star3" value="3">
+                                    <label for="rating1-star3">★</label>
+                                    <input type="radio" name="rating1" id="rating1-star4" value="4">
+                                    <label for="rating1-star4">★</label>
+                                    <input type="radio" name="rating1" id="rating1-star5" value="5">
+                                    <label for="rating1-star5">★</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Entrenador 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card">
+                                    <img src="./assets/fotos/entrenadores/yoga.jpg" class="card-img-top" alt="Entrenador 2">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">María López</h5>
+                                        <p class="card-text">Especialista en Yoga</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>María López</h5>
+                                <p>Instructora certificada en yoga y mindfulness.</p>
+                                <div class="mb-3">
+                                    <label>Flexibilidad</label>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-width="85"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Enseñanza</label>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 0%;" data-width="95"></div>
+                                    </div>
+                                </div>
+                                <div class="star-rating d-flex justify-content-center">
+                                    <input type="radio" name="rating2" id="rating2-star5" value="5">
+                                    <label for="rating2-star5">★</label>
+                                    <input type="radio" name="rating2" id="rating2-star4" value="4">
+                                    <label for="rating2-star4">★</label>
+                                    <input type="radio" name="rating2" id="rating2-star3" value="3">
+                                    <label for="rating2-star3">★</label>
+                                    <input type="radio" name="rating2" id="rating2-star2" value="2">
+                                    <label for="rating2-star2">★</label>
+                                    <input type="radio" name="rating2" id="rating2-star1" value="1">
+                                    <label for="rating2-star1">★</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Entrenador 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card">
+                                    <img src="./assets/fotos/entrenadores/crossfit.jpg" class="card-img-top" alt="Entrenador 3">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Carlos Gómez</h5>
+                                        <p class="card-text">Especialista en CrossFit</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>Carlos Gómez</h5>
+                                <p>Experto en entrenamientos funcionales intensos.</p>
+                                <div class="mb-3">
+                                    <label>Intensidad</label>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-width="80"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Motivación</label>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 0%;" data-width="90"></div>
+                                    </div>
+                                </div>
+                                <div class="star-rating d-flex justify-content-center">
+                                    <input type="radio" name="rating3" id="rating3-star5" value="5">
+                                    <label for="rating3-star5">★</label>
+                                    <input type="radio" name="rating3" id="rating3-star4" value="4">
+                                    <label for="rating3-star4">★</label>
+                                    <input type="radio" name="rating3" id="rating3-star3" value="3">
+                                    <label for="rating3-star3">★</label>
+                                    <input type="radio" name="rating3" id="rating3-star2" value="2">
+                                    <label for="rating3-star2">★</label>
+                                    <input type="radio" name="rating3" id="rating3-star1" value="1">
+                                    <label for="rating3-star1">★</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Entrenador 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card">
+                                    <img src="./assets/fotos/entrenadores/pilates-entrenador.jpg" class="card-img-top" alt="Entrenador 3">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Maria Marchesi</h5>
+                                        <p class="card-text">Especialista en Pilates</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>Maria Marchesi</h5>
+                                <p>Experta en entrenamientos de fuerza y flexibilidad.</p>
+                                <div class="mb-3">
+                                    <label>Flexibilidad</label>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-width="80"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Resistencia</label>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 0%;" data-width="90"></div>
+                                    </div>
+                                </div>
+                                <div class="star-rating d-flex justify-content-center">
+                                    <input type="radio" name="rating4" id="rating4-star5" value="5">
+                                    <label for="rating4-star5">★</label>
+                                    <input type="radio" name="rating4" id="rating4-star4" value="4">
+                                    <label for="rating4-star4">★</label>
+                                    <input type="radio" name="rating4" id="rating4-star3" value="3">
+                                    <label for="rating4-star3">★</label>
+                                    <input type="radio" name="rating4" id="rating4-star2" value="2">
+                                    <label for="rating4-star2">★</label>
+                                    <input type="radio" name="rating4" id="rating4-star1" value="1">
+                                    <label for="rating4-star1">★</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Entrenador 5 - powerlifting, lo mismo que antes-->
+                <div class="col-md-4 mb-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card">
+                                    <img src="./assets/fotos/entrenadores/powerlifting.jpg" class="card-img-top" alt="Entrenador 4">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Lucila Luján</h5>
+                                        <p class="card-text">Especialista en Powerlifting</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>Lucila Luján</h5>
+                                <p>Experta en entrenamientos de fuerza y resistencia.</p>
+                                <div class="mb-3">
+                                    <label>Intensidad</label>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-width="80"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Resistencia</label>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 0%;" data-width="90"></div>
+                                    </div>
+                                </div>
+                                <div class="star-rating d-flex justify-content-center">
+                                    <input type="radio" name="rating6" id="rating6-star5" value="5">
+                                    <label for="rating6-star5">★</label>
+                                    <input type="radio" name="rating6" id="rating6-star4" value="4">
+                                    <label for="rating6-star4">★</label>
+                                    <input type="radio" name="rating6" id="rating6-star3" value="3">
+                                    <label for="rating6-star3">★</label>
+                                    <input type="radio" name="rating6" id="rating6-star2" value="2">
+                                    <label for="rating6-star2">★</label>
+                                    <input type="radio" name="rating6" id="rating6-star1" value="1">
+                                    <label for="rating6-star1">★</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Entrenador 6 - calistenia-->
+                <div class="col-md-4 mb-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card">
+                                    <img src="./assets/fotos/entrenadores/calistenia-entrenadorDEF.jpg" class="card-img-top" alt="Entrenador 6">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Li Sun</h5>
+                                        <p class="card-text">Especialista en Calistenia</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>Li Sun</h5>
+                                <p>Experto en entrenamientos de fuerza y resistencia corporal.</p>
+                                <div class="mb-3">
+                                    <label>Disciplina</label>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-width="80"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Agilidad</label>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 0%;" data-width="90"></div>
+                                    </div>
+                                </div>
+                                <div class="star-rating d-flex justify-content-center">
+                                    <input type="radio" name="rating6" id="star2-5" value="5">
+                                    <label for="star2-5">★</label>
+                                    <input type="radio" name="rating6" id="star2-4" value="4">
+                                    <label for="star2-4">★</label>
+                                    <input type="radio" name="rating6" id="star2-3" value="3">
+                                    <label for="star2-3">★</label>
+                                    <input type="radio" name="rating6" id="star2-2" value="2">
+                                    <label for="star2-2">★</label>
+                                    <input type="radio" name="rating6" id="star2-1" value="1">
+                                    <label for="star2-1">★</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Newsletter</h3>
+                    <form id="newsletterForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="Tu email" required>
+                            <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h3>Redes</h3>
+                    <a href="#" class="text-white d-block">Facebook</a>
+                    <a href="#" class="text-white d-block">Instagram</a>
+                    <a href="#" class="text-white d-block">Twitter</a>
+                </div>
+                <div class="col-md-4">
+                    <h3>Mapa</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=..." style="width: 100%; height: 200px; border: 0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Validación del formulario del footer
+            $('#newsletterForm').on('submit', function(e) {
+                e.preventDefault();
+                const emailInput = $(this).find('input[type="email"]');
+                const spinner = $(this).find('.spinner-border');
+                if (emailInput.val() === '') {
+                    emailInput.addClass('is-invalid');
+                } else {
+                    emailInput.removeClass('is-invalid').addClass('is-valid');
+                    spinner.removeClass('d-none');
+                    setTimeout(() => {
+                        spinner.addClass('d-none');
+                        alert('¡Gracias por suscribirte!');
+                        emailInput.removeClass('is-valid').val('');
+                    }, 2000);
+                }
+            });
+
+            // Menú: aparece al pasar el mouse
+            $('.dropdown').hover(function() {
+                $(this).find('.dropdown-menu').slideDown(200);
+            }, function() {
+                $(this).find('.dropdown-menu').slideUp(200);
+            });
+
+            // Animar barras de habilidades al cargar
+            $('.progress-bar').each(function() {
+                const width = $(this).data('width');
+                $(this).animate({ width: width + '%' }, 1000);
+            });
+
+            // Manejo del sistema de rating con estrellas
+            $('.star-rating input').on('change', function() {
+                const ratingValue = $(this).val();
+                alert('Has calificado con ' + ratingValue + ' estrellas.');
+            });
+
+            $('.star-rating label').hover(function() {
+                $(this).addClass('hover').prevAll().addClass('hover');
+            }, function() {
+                $(this).removeClass('hover').prevAll().removeClass('hover');
+            });
+        });
+    </script>
+</body>
+</html>
